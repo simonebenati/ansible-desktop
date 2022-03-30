@@ -11,7 +11,7 @@
         - tmux
         - vim-nox
         - python3-psutil
-        - google-chrome-stable
+        - google-chrome
         - code
         - git
 
