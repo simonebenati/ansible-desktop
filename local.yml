@@ -13,7 +13,7 @@
         - python3-psutil
         - google-chrome
         - code
-        - git
+        
 
   - name: copy wallpaper file
     copy:
