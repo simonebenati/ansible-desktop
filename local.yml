@@ -11,9 +11,7 @@
         - tmux
         - vim-nox
         - python3-psutil
-        - google-chrome-stable
-        - code
-        - git
+           
 
   - name: copy wallpaper file
     copy:
@@ -21,6 +19,25 @@
       dest: /usr/share/backgrounds/ansible-wallpaper.jpg
       owner: root
       group: root
+
+  - name: make install directory
+    file: 
+      path: /install-temp
+      state: directory 
+
+
+  - name: copy file packages
+    copy:
+      src: files/file-pkgs
+      dest: /install-temp
+      owner: root
+      group: root
+
+  - name: run installer for packages
+    ansible.builtin.script: /install-temp/file-pkgs/installer.py
+    args:
+      executable: python3
+
   
   - name: set wallpaper
     become_user: user
