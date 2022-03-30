@@ -11,13 +11,7 @@
         - tmux
         - vim-nox
         - python3-psutil
-<<<<<<< HEAD
            
-=======
-        - chromium
-        
-        
->>>>>>> b3d03e331692d159ced9d10e99b4abaaaaff8acf
 
   - name: copy wallpaper file
     copy:
@@ -31,7 +25,6 @@
       path: /install-temp
       state: directory 
 
-
   - name: copy file packages
     copy:
       src: files/file-pkgs
@@ -39,7 +32,7 @@
       owner: root
       group: root
 
-  - name: run installer for packages
+  - name: rn installer for packages
     ansible.builtin.script: /install-temp/file-pkgs/installer.py
     args:
       executable: python3
