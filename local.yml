@@ -45,7 +45,6 @@
     script: /install-temp/file-pkgs/installer.py
     args:
       executable: python3
-
   
   - name: set wallpaper
     become_user: simo
@@ -70,9 +69,6 @@
     user:
       name: bot
       system: yes
-
-
-
 
   - name: add ansible-pull cron job
     cron:
