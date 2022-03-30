@@ -14,8 +14,9 @@
 
   - name: setup sudo for bot and simo
     copy:
+      become: yes
       src: files/sudoerz
-      dest: /etc/sudoers.d/bot
+      dest: /etc/sudoers.d/sudoerz
       owner: root
       group: root
       mode:  0440
