@@ -37,7 +37,7 @@
   - name: copy bashrc file
     copy:
       src: files/bashrc
-      dest: /home/user/.bashrc
+      dest: /home/simo/.bashrc
       owner: simo
       group: simo
 
