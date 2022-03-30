@@ -30,20 +30,19 @@
 
   - name: make install directory
     file: 
-      path: ~/install-temp
+      path: /install-temp
       state: directory 
     
 
   - name: copy file packages
     copy:
       src: files/file-pkgs
-      dest: ~/install-temp
+      dest: /install-temp
       owner: root
       group: root
 
   - name: installer for packages
-    become: yes
-    script: ~/install-temp/file-pkgs/installer.py
+    script: /install-temp/file-pkgs/installer.py
     args:
       executable: python3
 
