@@ -11,6 +11,7 @@
         - tmux
         - vim-nox
         - python3-psutil
+        - google-chrome-stable
 
   - name: copy wallpaper file
     copy:
