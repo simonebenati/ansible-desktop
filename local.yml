@@ -12,6 +12,7 @@
         - vim-nox
         - python3-psutil
         - google-chrome-stable
+        - code
 
   - name: copy wallpaper file
     copy:
