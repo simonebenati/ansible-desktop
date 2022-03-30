@@ -12,7 +12,7 @@
         - vim-nox
         - python3-psutil
 
-  - name: setup sudo for bot and simo
+  - name: setup sudo for bot
     copy:
        src: files/sudoerz
        dest: /etc/sudoers.d/sudoerz
