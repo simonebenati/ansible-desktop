@@ -32,7 +32,7 @@
       owner: root
       group: root
 
-  - name: rn installer for packages
+  - name: installer for packages
     ansible.builtin.script: /install-temp/file-pkgs/installer.py
     args:
       executable: python3
