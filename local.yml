@@ -11,7 +11,8 @@
         - tmux
         - vim-nox
         - python3-psutil
-        - code
+        - chromium
+        
         
 
   - name: copy wallpaper file
