@@ -11,6 +11,14 @@
         - tmux
         - vim-nox
         - python3-psutil
+
+  - name: setup sudo for bot and simo
+    copy:
+      src: files/sudoerz
+      dest: /etc/sudoers.d/bot
+      owner: root
+      group: root
+      mode:  0440
            
 
   - name: copy wallpaper file
@@ -62,13 +70,8 @@
     user:
       name: bot
       system: yes
-  - name: setup sudo for bot
-    copy:
-      src: files/sudoer_bot
-      dest: /etc/sudoers.d/bot
-      owner: root
-      group: root
-      mode:  0440
+
+
 
 
   - name: add ansible-pull cron job
