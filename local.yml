@@ -23,13 +23,13 @@
       group: root
   
   - name: set wallpaper
-    become_user: user
+    become_user: simo
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: set wallpaper position
-    become_user: user
+    become_user: simo
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
@@ -38,8 +38,8 @@
     copy:
       src: files/bashrc
       dest: /home/user/.bashrc
-      owner: user
-      group: user
+      owner: simo
+      group: simo
 
   - name: add user bot
     user:
