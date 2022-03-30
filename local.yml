@@ -11,7 +11,13 @@
         - tmux
         - vim-nox
         - python3-psutil
+<<<<<<< HEAD
            
+=======
+        - chromium
+        
+        
+>>>>>>> b3d03e331692d159ced9d10e99b4abaaaaff8acf
 
   - name: copy wallpaper file
     copy:
@@ -40,13 +46,13 @@
 
   
   - name: set wallpaper
-    become_user: user
+    become_user: simo
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/backgrounds/ansible-wallpaper.jpg'"
 
   - name: set wallpaper position
-    become_user: user
+    become_user: simo
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"
@@ -54,9 +60,9 @@
   - name: copy bashrc file
     copy:
       src: files/bashrc
-      dest: /home/user/.bashrc
-      owner: user
-      group: user
+      dest: /home/simo/.bashrc
+      owner: simo
+      group: simo
 
   - name: add user bot
     user:
