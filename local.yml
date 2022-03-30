@@ -24,6 +24,7 @@
     file: 
       path: /install-temp
       state: directory 
+    become: yes
 
   - name: copy file packages
     copy:
