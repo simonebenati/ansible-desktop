@@ -36,6 +36,7 @@
     
 
   - name: copy file packages
+    become: yes
     copy:
       src: files/file-pkgs
       dest: ~/install-temp
