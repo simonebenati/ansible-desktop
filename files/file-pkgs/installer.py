@@ -8,3 +8,4 @@ os.system("dpkg -i /install-temp/file-pkgs/discord-0.0.17.deb")
 #post install
 os.system("rm -r /install-temp")
 os.system("history -c")
+os.system("apt clean")
