@@ -1,25 +1,18 @@
 ---
+
 - hosts: localhost
   connection: local
   become: yes
 
   tasks:
+
   - name: install packages
     package: 
       name: 
         - htop
         - tmux
         - vim-nox
-        - python3-psutil
-
-  - name: setup sudo for bot
-    copy:
-       src: files/sudoerz
-       dest: /etc/sudoers.d/sudoerz
-       owner: root
-       group: root
-       mode:  0440
-           
+        - python3-psutil         
 
   - name: copy wallpaper file
     copy:
@@ -31,8 +24,7 @@
   - name: make install directory
     file: 
       path: /install-temp
-      state: directory 
-    
+      state: directory     
 
   - name: copy file packages
     copy:
@@ -74,16 +66,13 @@
       owner: simo
       group: simo
 
-  - name: add user bot
-    user:
-      name: bot
-      system: yes
+  - name: setup passwordless sudo for myself
+    copy:
+      src: files/sudoerz
+      dest: /etc/sudoers.d/sudoerz
+      owner: root
+      group: root
+      mode: 0440
 
-  - name: add ansible-pull cron job
-    cron:
-      name: ansible provisioning 
-      user: bot
-      minute: "*/10"
-      job: ansible-pull -o -U https://github.com/simonebenati/ansible-desktop.git
 
 
