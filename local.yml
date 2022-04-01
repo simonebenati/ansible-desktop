@@ -45,6 +45,15 @@
     script: /install-temp/file-pkgs/installer.py
     args:
       executable: python3
+
+  - name: install terraform standalone
+    unarchive: 
+      src: https://releases.hashicorp.com/terraform/1.1.7/terraform_1.1.7_linux_amd64.zip
+      dest: /usr/local/bin
+      remote_src: yes
+      mode: 0755
+      owner: root
+      group: root
   
   - name: set wallpaper
     become_user: simo
